@@ -1,3 +1,9 @@
+"""
+Die sticker IDs
+
+Created by Jesús Jiménez Sánchez.
+"""
+
 ONE = 'CAACAgIAAxkBAAEDxZ9h9TLsENHqeHlZ4Qfk9g3g_MgTzAACZgADH-gNNDgwae27jmsOIwQ'
 TWO = 'CAACAgIAAxkBAAEDxaFh9TOH1DtacL00Oy8FQ2aXtPmzqgACZwADH-gNNI0RXkdTtPuIIwQ'
 THREE = 'CAACAgIAAxkBAAEDxaNh9TOSr2WEqvmq_ge0jDf4SmE-AgACaAADH-gNNKEG5HD-72OvIwQ'
