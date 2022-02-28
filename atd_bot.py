@@ -11,7 +11,7 @@ from tg_token import API_TOKEN
 from sticker_ids import ALL
 
 
-URL = "https://api.telegram.org/bot{}/".format(API_TOKEN)
+URL = f"https://api.telegram.org/bot{API_TOKEN}/"
 
 
 def get_url(url):
@@ -27,7 +27,7 @@ def send_sticker(chat_id, die_result):
     '''
         Respond with sticker.
     '''
-    url = URL + "sendSticker?sticker={}&chat_id={}".format(die_result, chat_id)
+    url = URL + f"sendSticker?sticker={die_result}&chat_id={chat_id}"
     get_url(url)
 
 
