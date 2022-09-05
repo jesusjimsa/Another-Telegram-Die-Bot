@@ -18,7 +18,7 @@ def get_url(url):
     '''
         Send request to the Telegram API.
     '''
-    response = requests.get(url)
+    response = requests.get(url, timeout=60)
     content = response.content.decode("utf8")
     return content
 
