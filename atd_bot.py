@@ -52,7 +52,7 @@ def main():
         Main.
     '''
     app = ApplicationBuilder().token(API_TOKEN).build()
-    
+
     app.add_handler(CommandHandler('start', start))
     app.add_handler(CommandHandler("roll", roll))
 
