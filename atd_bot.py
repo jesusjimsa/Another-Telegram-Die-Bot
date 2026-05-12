@@ -6,13 +6,27 @@ Created by Jesús Jiménez Sánchez.
 
 from random import randint
 import requests
+import threading
+import time
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from tg_token import API_TOKEN
 from sticker_ids import ALL
+from kuma_url import KUMA_PUSH_URL
 
 
 URL = f"https://api.telegram.org/bot{API_TOKEN}/"
+
+def heartbeat():
+    '''
+        Send ping to Uptime Kuma
+    '''
+    while True:
+        try:
+            requests.get(KUMA_PUSH_URL, timeout=5)
+        except Exception:
+            pass
+        time.sleep(60)
 
 
 def get_url(url):
@@ -55,6 +69,8 @@ def main():
 
     app.add_handler(CommandHandler('start', start))
     app.add_handler(CommandHandler("roll", roll))
+
+    threading.Thread(target=heartbeat, daemon=True).start()
 
     app.run_polling()
 

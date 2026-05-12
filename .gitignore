@@ -241,3 +241,4 @@ cython_debug/
 # Mine
 tg_token.py
 settings.json
+kuma_url.py
