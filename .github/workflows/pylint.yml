@@ -28,6 +28,10 @@ jobs:
       run: |
         echo '"""tg_token module"""' >> tg_token.py
         echo "API_TOKEN = 1" >> tg_token.py
+    -name: Prepare kuma_url.py file
+      run: |
+        echo '"""kuma_push_url module"""'
+        echo "KUMA_PUSH_URL = 1" >> kuma_url.py
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')

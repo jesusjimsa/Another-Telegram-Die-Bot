@@ -5,9 +5,9 @@ Created by Jesús Jiménez Sánchez.
 """
 
 from random import randint
-import requests
-import threading
 import time
+import threading
+import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from tg_token import API_TOKEN
