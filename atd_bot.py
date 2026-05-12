@@ -24,7 +24,7 @@ def heartbeat():
     while True:
         try:
             requests.get(KUMA_PUSH_URL, timeout=5)
-        except Exception:
+        except requests.exceptions.RequestException:
             pass
         time.sleep(60)
 
